@@ -111,10 +111,6 @@ Choose a display name that helps users recognize the connection in a Copilot res
 - Generate private key from your GitHub App following the [GitHub documentation](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/managing-private-keys-for-github-apps).
 - Enter your **Client ID** from your GitHub App, your organization name, and upload the private key generated from the last step.
 
-#### Authentication type: GitHub App (installation)
-- Generate private key from your GitHub App following the [GitHub documentation](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/managing-private-keys-for-github-apps).
-- Enter your **Client ID** from your GitHub App, your organization name, and upload the private key generated from the last step.
-
 ### 3. Roll out to limited audience
 Before you deploy the connector, test the connection with a limited user base in Copilot and Microsoft Search.
 
