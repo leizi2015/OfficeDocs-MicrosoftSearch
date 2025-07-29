@@ -23,7 +23,7 @@ The GitHub Cloud Knowledge Microsoft 365 Copilot connector allows you to index c
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a GitHub Cloud Knowledge Copilot connector.
 
 ## Capabilities
-- Index GitHub Cloud repositories and markdown files to make project documentation accessible in Microsoft 365.
+- Index GitHub Cloud repositories, markdown, and text files to make project documentation accessible in Microsoft 365.
 - Enable end users to ask questions in Copilot related to project documentation and technical guides.
    - How do I set up Project Alpha?
    - Where can I find the deployment instructions?
@@ -32,8 +32,8 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
-- Only repository metadata and markdown files are indexed. Other GitHub entities such as issues, pull requests, and comments aren't indexed.
-- Only markdown files up to 1 MB in size are supported. Larger files aren't indexed.
+- Only repository metadata, markdown, and text files are indexed. Other GitHub entities such as issues, pull requests, and comments aren't indexed.
+- Only markdown and text files up to 4 MB in size are supported. Larger files aren't indexed.
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
@@ -131,7 +131,7 @@ For more information about identity transformation, see [Map your non-Azure AD I
  
 ### Content
 
-Choose the repositories and file types (initially markdown files and other non-code documentation) you wish to make searchable.
+Choose the repositories and file types (initially markdown files and text documentation) you wish to make searchable.
 
 Under **Manage Properties** you can add or remove available properties from your GitHub data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property.
 
