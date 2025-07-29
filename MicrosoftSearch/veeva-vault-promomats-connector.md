@@ -92,7 +92,7 @@ To configure Microsoft Entra ID OAuth 2.0/OpenID Connect for the Veeva Vault Cop
    5. Click **Upload AS metadata** and select **Provide Authorization Server Metadata URL**.
    6. Use the link below, replace {tenant-id} with your tenant ID, and paste it into the field.
       `https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration`
-   7. Select **Identity is in another claim** and enter "**UPN**".
+   7. Select **Identity is in another claim** and enter "**upn**".
    8. In **User ID Type**, select **Federated ID**, and uncheck **Perform Strict Audience Restriction validation**.
 
    > [!NOTE]
