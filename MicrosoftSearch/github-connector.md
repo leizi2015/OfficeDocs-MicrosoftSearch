@@ -33,7 +33,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Limitations
 - Only repository metadata, markdown, and text files are indexed. Other GitHub entities such as issues, pull requests, and comments aren't indexed.
-- Only markdown and text files up to 4 MB in size are supported. Larger files aren't indexed.
+- Only markdown and text files up to 1 MB in size are supported. Larger files aren't indexed.
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
