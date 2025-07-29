@@ -23,7 +23,7 @@ The GitHub Cloud Knowledge Microsoft 365 Copilot connector allows you to index c
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a GitHub Cloud Knowledge Copilot connector.
 
 ## Capabilities
-- Index GitHub Cloud repositories and markdown files to make project documentation accessible in Microsoft 365.
+- Index GitHub Cloud repositories, markdown, and text files to make project documentation accessible in Microsoft 365.
 - Enable end users to ask questions in Copilot related to project documentation and technical guides.
    - How do I set up Project Alpha?
    - Where can I find the deployment instructions?
@@ -32,8 +32,8 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
-- Only repository metadata and markdown files are indexed. Other GitHub entities such as issues, pull requests, and comments aren't indexed.
-- Only markdown files up to 1 MB in size are supported. Larger files aren't indexed.
+- Only repository metadata, markdown, and text files are indexed. Other GitHub entities such as issues, pull requests, and comments aren't indexed.
+- Only markdown and text files up to 1 MB in size are supported. Larger files aren't indexed.
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
@@ -97,9 +97,16 @@ Follow the steps below to create a GitHub App for use with your Graph Connector:
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. Authentication Type
-- Select **GitHub App (on behalf of a user)** as the authentication method.
-- Enter the **Client ID** and **Client Secret** from the GitHub App you created [earlier](#set-up-a-github-app-for-authentication).
-- Click **Authorize** to sign in and grant the required access permissions.
+#### Authentication type: GitHub App (on behalf of user)
+- Enter your **Client ID** and **Client secret** from your GitHub App.
+- Choose **Authorize** to sign in and grant access. We recommend using separate user accounts for OAuth authentication with each connection, as GitHub's rate limit is calculated individually per user.
+	@@ -112,6 +111,10 @@ Choose a display name that helps users recognize the connection in a Copilot res
+- Generate private key from your GitHub App following the [GitHub documentation](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/managing-private-keys-for-github-apps).
+- Enter your **Client ID** from your GitHub App, your organization name, and upload the private key generated from the last step.
+
+#### Authentication type: GitHub App (installation)
+- Generate private key from your GitHub App following the [GitHub documentation](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/managing-private-keys-for-github-apps).
+- Enter your **Client ID** from your GitHub App, your organization name, and upload the private key generated from the last step.
 
 ### 3. Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
@@ -125,13 +132,11 @@ To ensure correct permission enforcement, map GitHub user identities to Microsof
 
 If direct mapping fails, use regular expressions (regex) to transform the data. For example: [a-zA-Z0-9]+ For personal accounts, mapping accuracy may be impacted due to variations in email domains and individual email visibility settings.
 
-For identity transformation, refer to the [Map your non-Azure AD Identities](map-non-aad.md).
-
 For more information about identity transformation, see [Map your non-Azure AD Identities](map-non-aad.md).
  
 ### Content
 
-Choose the repositories and file types (initially markdown files and other non-code documentation) you wish to make searchable.
+Choose the repositories and file types (initially markdown files and text documentation) you wish to make searchable.
 
 Under **Manage Properties** you can add or remove available properties from your GitHub data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property.
 
