@@ -101,12 +101,15 @@ Follow the steps below to create a GitHub App for use with your Copilot connecto
 ### Choose display name
 Choose a display name that helps users recognize the connection in a Copilot response.
 
-### Provide authentication details
-
+### Provide authentication type
 #### Authentication type: GitHub App (on behalf of user)
 - Enter your **Client ID** and **Client secret** from your GitHub App.
 - Choose **Authorize** to sign in and grant access. We recommend using separate user accounts for OAuth authentication with each connection, as GitHub's rate limit is calculated individually per user.
 - Grant the required API scopes.
+
+#### Authentication type: GitHub App (installation)
+- Generate private key from your GitHub App following the [GitHub documentation](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/managing-private-keys-for-github-apps).
+- Enter your **Client ID** from your GitHub App, your organization name, and upload the private key generated from the last step.
 
 #### Authentication type: GitHub App (installation)
 - Generate private key from your GitHub App following the [GitHub documentation](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/managing-private-keys-for-github-apps).
