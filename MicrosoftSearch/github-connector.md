@@ -97,9 +97,16 @@ Follow the steps below to create a GitHub App for use with your Graph Connector:
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. Authentication Type
-- Select **GitHub App (on behalf of a user)** as the authentication method.
-- Enter the **Client ID** and **Client Secret** from the GitHub App you created [earlier](#set-up-a-github-app-for-authentication).
-- Click **Authorize** to sign in and grant the required access permissions.
+#### Authentication type: GitHub App (on behalf of user)
+- Enter your **Client ID** and **Client secret** from your GitHub App.
+- Choose **Authorize** to sign in and grant access. We recommend using separate user accounts for OAuth authentication with each connection, as GitHub's rate limit is calculated individually per user.
+	@@ -112,6 +111,10 @@ Choose a display name that helps users recognize the connection in a Copilot res
+- Generate private key from your GitHub App following the [GitHub documentation](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/managing-private-keys-for-github-apps).
+- Enter your **Client ID** from your GitHub App, your organization name, and upload the private key generated from the last step.
+
+#### Authentication type: GitHub App (installation)
+- Generate private key from your GitHub App following the [GitHub documentation](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/managing-private-keys-for-github-apps).
+- Enter your **Client ID** from your GitHub App, your organization name, and upload the private key generated from the last step.
 
 ### 3. Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
