@@ -132,8 +132,6 @@ To ensure correct permission enforcement, map GitHub user identities to Microsof
 
 If direct mapping fails, use regular expressions (regex) to transform the data. For example: [a-zA-Z0-9]+ For personal accounts, mapping accuracy may be impacted due to variations in email domains and individual email visibility settings.
 
-For identity transformation, refer to the [Map your non-Azure AD Identities](map-non-aad.md).
-
 For more information about identity transformation, see [Map your non-Azure AD Identities](map-non-aad.md).
  
 ### Content
