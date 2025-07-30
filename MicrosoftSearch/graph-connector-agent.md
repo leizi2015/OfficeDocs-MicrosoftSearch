@@ -24,6 +24,9 @@ Using on-premises connectors requires installing *Microsoft Graph connector agen
 
 [Download](https://aka.ms/gca) the latest version of the Microsoft Graph connector agent and install the software by using the installation configuration assistant. Release notes of the connector agent software are available [here](./graph-connector-agent-releases.md)
 
+>[!NOTE]
+>Please keep the GCA version up-to-date to ensure feature completeness.
+
 ### Check execution policy
 
 The execution policy has to be set to allow the execution of remote signed scripts. If any machine or group-level policy is restricting the same, the installation of GCA fails. Run the following command to get the execution policy:
